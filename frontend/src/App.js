@@ -1,16 +1,28 @@
 import "./App.css";
-import Start from "./layouts/Start/Start";
-import CreateTest from "./layouts/CreateTests/CreateTest";
-
+import {Route, Routes} from "react-router-dom";
+import Start from "./layouts/start/Start";
+import CreateTest from "./layouts/createTests/CreateTest";
+import EditTest from "./layouts/editTest/EditTest";
+import Statistics from "./layouts/statistics/Statistics";
+import SignIn from "./layouts/auth/signIn/SignIn";
+import SignUp from "./layouts/auth/signUp/SignUp";
 
 function App() {
 
     return (
         <>
-        <Start/>
+
+  <Routes>
+      <Route path={"/*"} element={<SignIn />}/>
+      <Route path={"/signUp"} element={<SignUp />}/>
+      <Route path="/" element={<Start />} />
+      <Route path="/creatTest" element={<CreateTest />} />
+      <Route path="/editTest" element={<EditTest />} />
+      <Route path="/statistics" element={<Statistics />} />
+  </Routes>
 
         </>
     )
-};
+}
 
 export default App;

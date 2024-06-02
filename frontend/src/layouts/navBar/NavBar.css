@@ -80,35 +80,49 @@ select {
 .nav_bar{
     display: flex;
     flex-direction: column;
-    width: 295px;
-
+    width: 290px;
+    height: 100vh;
 }
 .nav_bar_header{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    background: #474747;
+    background: -webkit-linear-gradient(top, #3ebed8, #536c75);
     padding: 10px;
     color: #FFFFFF;
-    border-bottom: 1px solid #DFE0E1;
+    border-bottom: 1px solid #ffffff;
 }
 
 .nav_bar_header img {
-    margin-right: 20px;
+
     width: 30px;
     height: 30px;
 }
 
 .nav_bar_buttons {
-    background-color: #474747;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    background-image: url("../../img/bg-01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
-    margin: 0 auto;
 }
 
+.nav_bar_buttons_before{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: rgba(24, 28, 28, 0.7);
 
+}
+
+.nav_li{
+    margin-top: 20px;
+
+}
+.nav_bar_exit{
+    margin-bottom: 20px;
+}
 
 
 .nav_bar_buttons button{
@@ -124,20 +138,22 @@ select {
     color: #FFFFFF;
     font-weight: bold;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 15px;
+
 
 }
 
 .nav_bar_buttons button:hover{
-    background-color: #5a5a5a;
+    background-color: hsla(0,0%,100%,.23);
 }
 
 .nav_bar_buttons button:focus {
-    background: hsla(0,0%,100%,.23)
+    background-color: #5a5a5a;
+
 }
 
 .nav_bar_buttons img {
-    margin-right: 5px;
+    margin-right: 8px;
     width: 30px;
     height: 30px;
 

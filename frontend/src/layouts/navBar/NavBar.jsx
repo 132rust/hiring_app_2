@@ -6,6 +6,7 @@ import StartIcon from "../../icons/start.png";
 import CreateTestIcon from "../../icons/test.png"
 import EditTestIcon from "../../icons/edit_test.png"
 import StatisticsIcon from "../../icons/statistics.png"
+import ExitIcon from "../../icons/exit.png"
 
 
 const NavBar = () => {
@@ -15,6 +16,7 @@ const NavBar = () => {
     const handleStart = () =>{
         navigate('/start');
     };
+
     const handleCreatTest = () =>{
         navigate('/creatTest');
     };
@@ -24,6 +26,9 @@ const NavBar = () => {
     const handleStatistics = () =>{
         navigate('/statistics');
     };
+    const handleExit = () =>{
+        navigate('/');
+    };
 
     return(
         <>
@@ -31,16 +36,37 @@ const NavBar = () => {
             <div className="nav_bar">
             <div className="nav_bar_header">
                 <img src={LogoIcon} alt="Logo"/>
-                <h1>RRResault</h1>
+                <h1>esssault</h1>
             </div>
-            <div className="nav_bar_buttons">
-                <ul>
-                    <li><button onClick={handleStart}><img src={StartIcon} alt={StartIcon}/>Начать тестирование</button></li>
-                    <li><button onClick={handleCreatTest}><img src={CreateTestIcon} alt={CreateTestIcon}/>Создать тест собеседования</button></li>
-                    <li><button onClick={handleEditTest}><img src={EditTestIcon} alt={EditTestIcon}/>Редактировать тест</button></li>
-                    <li><button onClick={handleStatistics}><img src={StatisticsIcon} alt={StatisticsIcon}/>Статистика</button></li>
-                </ul>
-            </div>
+                <div className="nav_bar_buttons">
+                    <div className="nav_bar_buttons_before">
+                        <div className="nav_li">
+                        <ul>
+                            <li>
+                                <button onClick={handleStart}><img src={StartIcon} alt={StartIcon}/>Начать тестирование
+                                </button>
+                            </li>
+                            <li>
+                                <button onClick={handleCreatTest}><img src={CreateTestIcon} alt={CreateTestIcon}/>Создать
+                                    тест
+                                </button>
+                            </li>
+                            <li>
+                                <button onClick={handleEditTest}><img src={EditTestIcon} alt={EditTestIcon}/>Редактировать
+                                    тест
+                                </button>
+                            </li>
+                            <li>
+                                <button onClick={handleStatistics}><img src={StatisticsIcon} alt={StatisticsIcon}/>Статистика
+                                </button>
+                            </li>
+                        </ul>
+                        </div>
+                    <div className="nav_bar_exit">
+                        <button onClick={handleExit}><img src={ExitIcon} alt={ExitIcon}/>Выйти</button>
+                    </div>
+                    </div>
+                </div>
             </div>
         </>
     )

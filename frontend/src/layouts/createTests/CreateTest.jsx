@@ -8,7 +8,9 @@ const CreateTest = () => {
             <NavBar />
             <div className="container">
                 <header>
-                    <h1>Создать тест</h1>
+                    <div className="label">
+                    <p>Создать тест</p>
+                    </div>
                     <div className="test_name">
                         <label>Название теста</label>
                         <input/>
@@ -18,6 +20,9 @@ const CreateTest = () => {
                     </div>
                 </header>
                 <div className="container_inner">
+                    <div className="test_number">
+                        <h4>Тест №: 1</h4>
+                    </div>
                     <div className="test">
                         <label>Вопрос</label>
                         <textarea/>
@@ -28,7 +33,7 @@ const CreateTest = () => {
                         </div>
                     </div>
                     <div className="delete_test">
-                        <button className="btn">X</button>
+                        <button>X</button>
                     </div>
                 </div>
 

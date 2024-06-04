@@ -6,9 +6,9 @@ import NavBar from "../navBar/NavBar";
 const StartTest = () => {
     return(
 
-        <div className="wrapper">
+        <div className="wrapper_content">
             <NavBar/>
-            <div className="container">
+            <div className="container_content">
                 <header>
                     <div className="label">
                         <p>Тестирование</p>

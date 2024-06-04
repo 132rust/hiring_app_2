@@ -1,10 +1,10 @@
-.wrapper{
+.wrapper_content{
     display: flex;
     flex-direction: row;
 
 }
 
-.container{
+.container_content{
     display: flex;
     flex-direction: column;
     background-color: #F7F7F8;

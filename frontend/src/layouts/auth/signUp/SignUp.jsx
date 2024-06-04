@@ -131,34 +131,35 @@ const SignUp = () => {
     };
 
     return (
-        <div className="wrapper">
-            <div className="wrapper_before">
-                <div className="container_form">
-                    <div className="form_header">
-                        <label><img src={LogoIcon} alt="LogoIcon"/><p>esssault</p></label>
-                        <button onClick={handleSignIn}>Авторизация</button>
-                    </div>
-                    <form onSubmit={handleSubmit}>
-                        <label>Регистрация</label>
-                        <input  onBlur={blurHandler} onChange={emailHandler} type="email" name="email" value={email} placeholder="Email"/>
-                        {emailDirty && emailError && (
-                            <div>{emailError}</div>
-                        )}
-                        <input  onBlur={blurHandler} onChange={passwordHandler} type="password" name="password" value={password} placeholder="Введите Ваш пароль"/>
-                        {passwordDirty && passwordError && (
-                            <div>{passwordError}</div>
-                        )}
-                        <input  onBlur={blurHandler} onChange={confirmPasswordHandler} type="password" name="confirmPassword" value={confirmPassword} placeholder="Подтвердите Ваш пароль"/>
-                        {confirmPasswordDirty && confirmPasswordError && (
-                            <div>{confirmPasswordError}</div>
-                        )}
-                        <input  onBlur={blurHandler} onChange={companyNameHandler} type="text" name="company_name" value={company_name} placeholder="Введите название Вашей компании"/>
-                        {companyNameDirty && companyNameError && (
-                            <div>{companyNameError}</div>
-                        )}
-                        <button disabled={!formValid}>Зарегистрироваться</button>
-                    </form>
+        <div className="wrapper_auth">
+            <div className="container_auth">
+                <div className="form_heading">
+                    <span><img src={LogoIcon} alt={LogoIcon}/>ESSSAULT</span>
+                    <button onClick={handleSignIn} className="signup-button">Авторизация</button>
                 </div>
+                <div className="heading">Регистрация</div>
+                <form action="" className="form" onSubmit={handleSubmit}>
+                    <input onBlur={blurHandler} onChange={emailHandler} required="" className="input" type="email" name="email" value={email} placeholder="E-mail"/>
+                    {emailDirty && emailError && (
+                        <div>{emailError}</div>
+                    )}
+                    <input onBlur={blurHandler} onChange={passwordHandler} required="" className="input" type="password" name="password" value={password}
+                           placeholder="Пароль"/>
+                    {passwordDirty && passwordError && (
+                        <div>{passwordError}</div>
+                    )}
+                    <input onBlur={blurHandler} onChange={confirmPasswordHandler} required="" className="input" type="password" name="confirmPassword" value={confirmPassword}
+                           placeholder="Пароль"/>
+                    {confirmPasswordDirty && confirmPasswordError && (
+                        <div>{confirmPasswordError}</div>
+                    )}
+                    <input onBlur={blurHandler} onChange={companyNameHandler} required="" className="input" type="text" name="company_name" value={company_name} placeholder="Название Вашей компании"/>
+                    {companyNameDirty && companyNameError && (
+                        <div>{companyNameError}</div>
+                    )}
+                    <button className="login-button" type="submit">Зарегистрироваться</button>
+
+                </form>
             </div>
         </div>
     )

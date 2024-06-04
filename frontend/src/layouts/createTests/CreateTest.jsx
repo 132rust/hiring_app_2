@@ -4,9 +4,9 @@ import NavBar from "../navBar/NavBar";
 
 const CreateTest = () => {
     return(
-        <div className="wrapper">
+        <div className="wrapper_content">
             <NavBar />
-            <div className="container">
+            <div className="container_content">
                 <header>
                     <div className="label">
                     <p>Создать тест</p>

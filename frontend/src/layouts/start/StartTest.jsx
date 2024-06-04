@@ -1,9 +1,9 @@
 import React from 'react';
-import "./Start.css"
+import "./StartTest.css"
 import NavBar from "../navBar/NavBar";
 
 
-const Start = () => {
+const StartTest = () => {
     return(
 
         <div className="wrapper">
@@ -12,6 +12,12 @@ const Start = () => {
                 <header>
                     <div className="label">
                         <p>Тестирование</p>
+                    </div>
+                    <div className="test_name">
+                        <label>url:local....</label>
+                    </div>
+                    <div className="container_btn">
+                        <button>Следующий вопрос</button>
                     </div>
                 </header>
                 <div className="container_inner">
@@ -37,4 +43,4 @@ const Start = () => {
     )
 };
 
-export default Start;
+export default StartTest;

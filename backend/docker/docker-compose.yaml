@@ -32,7 +32,7 @@ services:
     container_name: "backend-app"
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: docker/Dockerfile
     restart: always
     volumes:
       - ../src:/home/my_user/src
@@ -41,7 +41,7 @@ services:
     depends_on:
       - database
     env_file:
-      - ../../../../.env
+      - ../../.env
     healthcheck:
       test: ["CMD", "curl", "-f", "localhost:8000/healthcheck"]
       interval: 15s

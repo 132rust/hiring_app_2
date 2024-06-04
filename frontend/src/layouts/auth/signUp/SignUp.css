@@ -1,0 +1,11 @@
+form button{
+    width: 200px;
+}
+
+
+form div {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+

@@ -9,7 +9,7 @@ const SignIn = () => {
     const navigate = useNavigate();
 
     const handleSignIn = () =>{
-        navigate('/start');
+        navigate('/startTest');
     };
 
     const handleSignUp = () => {
@@ -18,24 +18,18 @@ const SignIn = () => {
 
 
     return(
-
         <div className="wrapper">
-            <div className="wrapper_before">
-                <div className="container_form">
-                    <div className="form_header">
-                       <label><img src={LogoIcon} alt="LogoIcon"/><p>esssault</p></label>
-                        <button onClick={handleSignUp}>Регистрация</button>
-                    </div>
-                    <form>
-                        <label>Авторизация</label>
-                        <input type="email" placeholder="Email"/>
-                        <input type="password" placeholder="Пароль"/>
-                        <button onClick={handleSignIn}>Войти</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        <div className="container">
+            <span><img src={LogoIcon} alt={LogoIcon}/>ESSSAULT</span>
+            <div className="heading">Авторизация</div>
+            <form action="" className="form">
+                <input required="" className="input" type="email" name="email" id="email" placeholder="E-mail"/>
+                    <input required="" className="input" type="password" name="password" id="password" placeholder="Пароль"/>
+                <button className="login-button" type="submit" value="Войти">Войти</button>
 
+            </form>
+        </div>
+        </div>
     )
 
 }
